@@ -1,1 +1,1 @@
-web:tokopedia-go-submittion
+web: tokopedia-go-submittion

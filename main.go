@@ -34,6 +34,7 @@ func main() {
 	}
 
 	db.AutoMigrate(&entity.Todo{})
+	fmt.Println("Database Connected")
 	todoRepository := repository.NewTodoRepository(db)
 	todoService := service.NewTodoService(todoRepository)
 	todoHandler := handler.NewTodoHandler(todoService)
@@ -55,5 +56,4 @@ func main() {
 	api.DELETE("/todos/:id", todoHandler.DeleteTodo)
 
 	router.Run(":8080")
-	fmt.Println("Database Connected")
 }
