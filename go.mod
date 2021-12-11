@@ -1,18 +1,18 @@
 module github.com/ekokurniadi/tokopedia-go-submittion
 
+// +heroku goVersion go1.17
 go 1.17
 
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-playground/validator/v10 v10.9.0
-	github.com/joho/godotenv v1.4.0
 	gorm.io/driver/postgres v1.2.3
 	gorm.io/gorm v1.22.4
 )
 
 require (
+	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
