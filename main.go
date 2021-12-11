@@ -55,5 +55,5 @@ func main() {
 	api.PUT("/todos/:id", todoHandler.UpdateTodo)
 	api.DELETE("/todos/:id", todoHandler.DeleteTodo)
 
-	router.Run(":8080")
+	router.Run()
 }

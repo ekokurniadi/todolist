@@ -1,4 +1,4 @@
-var server = "http://localhost:8080/api/v1/";
+var server = "https://tokped-todo-list.herokuapp.com/api/v1/";
 
 function getCompletedTodos() {
     var result = null
