@@ -16,16 +16,19 @@ import (
 )
 
 func main() {
+	// uncomment this part for running on local computer
 	// env := godotenv.Load()
 	// if env != nil {
 	// 	log.Fatal("Error loading .env file")
 	// }
+
 	host := os.Getenv("DB_HOST")
 	userHost := os.Getenv("DB_USER")
 	userPass := os.Getenv("DB_PASSWORD")
 	databaseName := os.Getenv("DB_DATABASE")
 	databasePort := os.Getenv("DB_PORT")
 
+	//if you want to running on local computer, please change sslmode to disable, i using require for running on heroku
 	dsn := "host=" + host + " user=" + userHost + " password=" + userPass + " dbname=" + databaseName + " port=" + databasePort + " sslmode=require TimeZone=Asia/Jakarta"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
